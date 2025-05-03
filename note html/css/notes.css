@@ -1,0 +1,266 @@
+
+/* === NOTES (Заметки) === */
+body {
+  background-color: #0a0f1c;
+  background-image: 
+    url("https://www.transparenttextures.com/patterns/stardust.png"),
+    radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-attachment: fixed, fixed;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem 1rem;
+}
+.logo-area {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.logo-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #00e0ff, #8affff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 12px rgba(0, 224, 255, 0.6);
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.note-form input,
+.note-form textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.note-form input::placeholder,
+.note-form textarea::placeholder {
+  color: #aaa;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 0 8px #00aaff;
+}
+
+.note-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.note-form button {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.note-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+}
+
+.notes-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.note-card {
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  padding: 1.2rem 1rem;
+  border-radius: 20px;
+  border-left: 6px solid #00aaff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  animation: fadeIn 0.4s ease;
+}
+
+.note-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.note-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.note-card p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.note-date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.tags-container {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: #00bcd4;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ff3b3b;
+}
+
+.color-picker {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.clear-button {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.notes-list:empty::before {
+  content: "Заметок пока нет. Добавь первую!";
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Анимация загрузки */
+.fade-in-page {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInPage 0.8s ease-out forwards;
+}
+
+.fade-in-smooth {
+  opacity: 0;
+  animation: fadeInPage 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-in-delayed {
+  opacity: 0;
+  animation: fadeInPage 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ /* Навигация */
+ .nav {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  opacity: 0.9;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #00e0ff;
+  text-shadow: 0 0 8px #00e0ff;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #00e0ff;
+  color: #ffffff;
+  opacity: 1;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Заметки</title>
+  <link rel="stylesheet" href="css/notes.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container fade-in-page">
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo-area">
+          <h1 class="logo-text">NoteSpace</h1>
+          <p class="subtitle">📝 Твои заметки</p>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">🏠 Главная</a>
+          <a href="notes.html" class="nav-link active">📝 Заметки</a>
+          <a href="api.html" class="nav-link">🌌 Цитаты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="notes-wrapper fade-in-smooth">
+      <div class="content-container">
+        <section class="note-form fade-in-delayed">
+          <input type="text" id="note-title" placeholder="Заголовок заметки" />
+          <textarea id="note-content" placeholder="Текст заметки..."></textarea>
+          <input type="text" id="note-tags" placeholder="Теги через запятую (например: важно, учеба)" />
+          <button id="add-note">Добавить заметку</button>
+        </section>
+
+        <section class="notes-list" id="notes-list">
+          <!-- Сюда будут динамически добавляться заметки -->
+        </section>
+      </div>
+    </main>
+
+    <footer class="fade-in-delayed">
+      <button id="clear-all" class="clear-button">🧹 Очистить всё</button>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+  

@@ -1,0 +1,176 @@
+
+/*Главная */
+body.home {
+    background-color: #0a0f1c;
+    background-image: 
+      url("https://www.transparenttextures.com/patterns/stardust.png"),
+      radial-gradient(ellipse at top, #1b2735 0%, #090a0f 100%);
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-attachment: fixed, fixed;
+    color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    
+  }
+  .page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .home-wrapper {
+    flex: 1;
+  }
+  .site-header {
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .logo-area {
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .logo-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #00e0ff, #8affff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(0, 224, 255, 0.6);
+    margin-bottom: 0.3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: -0.5rem;
+  }
+  
+  .main-content {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+  }
+  
+  .description {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  
+  .features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .features li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    color: #aeeaff;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00bcd4, #2196f3);
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+  }
+  
+  .home-footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    padding: 2rem 1rem 1rem;
+    margin-top: auto;
+  }
+  
+  /* Навигация */
+  .nav {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: #00e0ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    opacity: 0.9;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #00e0ff;
+    text-shadow: 0 0 8px #00e0ff;
+  }
+  
+  .nav-link.active {
+    border-bottom: 2px solid #00e0ff;
+    color: #ffffff;
+    opacity: 1;
+  }
+  .fade-in {
+    animation: fadeInUp 0.5s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .fade-in-text {
+    opacity: 0;
+    animation: fadeInText 2s ease forwards;
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

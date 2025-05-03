@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoteSpace — Цитаты</title>
+  <link rel="stylesheet" href="css/api.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="fade-in-page">
+    <header class="site-header">
+      <div class="header-content">
+        <div class="logo-area">
+          <h1 class="logo-text">NoteSpace</h1>
+          <p class="subtitle">🌌 Космические цитаты</p>
+        </div>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">🏠 Главная</a>
+          <a href="notes.html" class="nav-link">📝 Заметки</a>
+          <a href="api.html" class="nav-link active">🌌 Цитаты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="api-container fade-in-smooth">
+      <p class="description">Нажми кнопку, чтобы получить вдохновение:</p>
+
+      <button id="get-quote" class="api-button">✨ Получить цитату</button>
+
+      <div id="quote-box" class="quote-box fade-in-delayed">
+        <p id="quote-text">...</p>
+        <p id="quote-author" class="quote-author"></p>
+      </div>
+
+      <a href="index.html" class="back-button">← Назад на главную</a>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+</body>
+</html>
