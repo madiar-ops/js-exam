@@ -169,6 +169,35 @@ body {
 .delete-btn:hover {
   color: #ff3b3b;
 }
+.pin-btn {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 198, 255, 0.25);
+}
+
+.pin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 198, 255, 0.4);
+}
+
+/* Стиль для закреплённой кнопки */
+.pin-btn.pinned {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.25);
+}
+
+.pin-btn.pinned:hover {
+  box-shadow: 0 6px 18px rgba(255, 71, 87, 0.4);
+}
+
 
 .color-picker {
   display: flex;
@@ -237,6 +266,7 @@ body {
  /* Навигация */
  .nav {
   margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
